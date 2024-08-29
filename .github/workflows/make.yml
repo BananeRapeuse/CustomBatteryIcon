@@ -1,0 +1,33 @@
+name: Build Tweak
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Theos
+      run: |
+        git clone --recursive https://github.com/theos/theos.git $HOME/theos
+        echo 'export THEOS=$HOME/theos' >> $HOME/.bash_profile
+        source $HOME/.bash_profile
+
+    - name: Install Dependencies
+      run: brew install dpkg ldid
+
+    - name: Build Project
+      run: |
+        make package
+
+    - name: Upload .deb
+      uses: actions/upload-artifact@v2
+      with:
+        name: CustomBatteryIcon.deb
+        path: ./packages/*.deb
