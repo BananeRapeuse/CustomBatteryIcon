@@ -1,9 +1,10 @@
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = CustomBattery
+TWEAK_NAME = CustomBatteryIcon
 
-CustomBattery_FILES = Tweak.xm
-CustomBattery_FRAMEWORKS = UIKit
+CustomBatteryIcon_FILES = Tweak.xm
+CustomBatteryIcon_FRAMEWORKS = UIKit
+CustomBatteryIcon_BUNDLE = CustomBatteryIconApp
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
