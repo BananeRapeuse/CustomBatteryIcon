@@ -1,9 +1,9 @@
-Package: com.example.custombattery
-Name: CustomBattery
+Package: com.ph0qu3_111.custombatteryicon
+Name: CustomBatteryIcon
 Version: 1.0
 Architecture: iphoneos-arm
-Description: Personnalisez votre icône de batterie
-Maintainer: Votre Nom <votremail@example.com>
-Author: Votre Nom <votremail@example.com>
+Description: Custom your battery icon
+Maintainer: Ph0qu3_111 <gruillair.raper60@gmail.com>
+Author: Ph0qu3_111 <gruillair.raper60@gmail.com>
 Section: Tweaks
 Depends: mobilesubstrate
